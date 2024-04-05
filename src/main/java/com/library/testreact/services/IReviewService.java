@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface IReviewService {
     List<Review> getAllReviews();
+    List<Review> getReviewsByBookId(Long bookId);
 
     Review getReviewById(Long id);
 

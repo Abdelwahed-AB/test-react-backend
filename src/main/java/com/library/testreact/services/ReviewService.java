@@ -18,6 +18,11 @@ public class ReviewService implements IReviewService {
     }
 
     @Override
+    public List<Review> getReviewsByBookId(Long bookId){
+        return reviewRepository.getReviewsByBook_Id(bookId);
+    }
+
+    @Override
     public Review getReviewById(Long id){
         return reviewRepository.findById(id).orElseThrow(()->new RuntimeException("Can't find review with id: "+id));
     }

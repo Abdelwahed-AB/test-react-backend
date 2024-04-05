@@ -13,8 +13,11 @@ public class ReviewController {
     private final IReviewService reviewService;
 
     @GetMapping
-    public List<Review> getAllReviews(){
-        return reviewService.getAllReviews();
+    public List<Review> getAllReviews(@RequestParam(required = false) Long bookId){
+        if(bookId == null){
+            return reviewService.getAllReviews();
+        }
+        return reviewService.getReviewsByBookId(bookId);
     }
 
     @GetMapping("/{id}")

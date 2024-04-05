@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController @RequestMapping("/reviews")
+@RestController @RequestMapping("/reviews") @CrossOrigin("*")
 @RequiredArgsConstructor
 public class ReviewController {
     private final IReviewService reviewService;

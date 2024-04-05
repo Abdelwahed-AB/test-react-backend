@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController @RequestMapping("/users")
+@RestController @RequestMapping("/users") @CrossOrigin("*")
 @RequiredArgsConstructor
 public class UserController {
     private final IUserService userService;

@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+@Entity @Table(name = "user_table")
 @Data
 public class User {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

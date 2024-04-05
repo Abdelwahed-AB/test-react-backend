@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController @RequestMapping("/books")
+@RestController @RequestMapping("/books") @CrossOrigin("*")
 @RequiredArgsConstructor
 public class BookController {
     private final IBookService bookService;
